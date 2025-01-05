@@ -29,7 +29,7 @@ servers’ Reliability, Availability and Serviceability (RAS).
 predicting hardware failures in cloud environments to ensure
 uninterrupted service continuity and optimal performance."
 
-    title1: background
+    title1: Background
     text1: "
     Uncorrectable Errors (UEs) of Dynamic Random Access Memory (DRAM) have been identified as a major failure cause in data centers. The multi-bit UE failure of High Bandwidth Memory (HBM) highly threatens the availability and reliability of servers and entire computing clusters. Forecasting UEs before enacting preemptive maintenance measures has emerged as a viable strategy for diminishing server outages. Some machine-learning based solutions have also been proposed.
 

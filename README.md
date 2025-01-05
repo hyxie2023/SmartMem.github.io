@@ -1,4 +1,4 @@
-# HW_RAS-tutorial-HPCA-2025
+# WWW 2025 Competition: SmartMemF
 
 This challenge is a part of [The Web Conference 2025](https://www2025.thewebconf.org/accepted-competitions).
 

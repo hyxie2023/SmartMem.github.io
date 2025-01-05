@@ -13,7 +13,8 @@ en: &DEFAULT_EN
   header:
     title: WWW 2025 Competition
     text: SmartMem:MemoryFailure Prediction for Reliable Cloud Service
-    button: Tell Me More
+    button_left: Tell Me More
+    button_right: Competition Page
     buttonlink: "#overview"
 
   overview:

@@ -1,6 +1,40 @@
 <!-- Overview -->
 <section class="page-section" id="{{ site.data.sitetext[site.locale].overview.section | default: 'overview' }}">
+  <style>
+    /* 定义样式 */
+    .announcement-banner {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      box-sizing: border-box;
+      background-color: #fff3cd;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ffeeba;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    /* 链接样式 */
+    .announcement-banner a {
+      color: #007bff; /* 链接颜色 */
+      text-decoration: none; /* 去掉下划线 */
+    }
+
+    .announcement-banner a:hover {
+      text-decoration: underline; /* 鼠标悬停时显示下划线 */
+    }
+  </style>
 <div class="container">
+  <div class="row">
+    <div class="announcement-banner">
+      <ul>
+        <li>🚩 This challenge is a part of <a href="https://www2025.thewebconf.org/accepted-competitions" target="_blank">The Web Conference 2025.</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="row">
     <div class="col-lg-12 text-center">
       <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].overview.title | default: "Overview" }}</h2>

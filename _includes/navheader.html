@@ -56,17 +56,12 @@
 	  {%- if site.data.sitetext[site.locale].header.text -%}
         <div class="intro-heading text-uppercase">{{ site.data.sitetext[site.locale].header.text | markdownify }}</div>
 	  {%- endif -%}
-	  {%- if site.data.sitetext[site.locale].header.button -%}
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext.header.buttonlink }}" style="margin-right: 20px;">
-          {{ site.data.sitetext.header.button_left }}
-        </a>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://www.codabench.org/competitions/3586/">
-          {{ site.data.sitetext.header.button_right }}
-        </a>
-
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext[site.locale].header.buttonlink }}">{{ site.data.sitetext[site.locale].header.button }}</a>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext[site.locale].header.buttonlink }}">{{ site.data.sitetext[site.locale].header.button }}</a>
-	  {%- endif -%}
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext.header.buttonlink }}" style="margin-right: 20px;">
+        {{ site.data.sitetext.header.button_left }}
+      </a>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="https://www.codabench.org/competitions/3586/">
+        {{ site.data.sitetext.header.button_right }}
+      </a>
       </div>
     </div>
   </header>
@@ -80,8 +75,8 @@
 	  {%- if site.data.sitetext.header.text -%}
         <div class="intro-heading text-uppercase">{{ site.data.sitetext.header.text | markdownify }}</div>
 	  {%- endif -%}
-      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext.header.buttonlink }}">{{ site.data.sitetext.header.button }}</a>
-      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext.header.buttonlink }}">{{ site.data.sitetext.header.button }}</a>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext.header.buttonlink }}" style="margin-right: 20px;">{{ site.data.sitetext.header.button_left }}</a>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ site.data.sitetext.header.buttonlink }}">{{ site.data.sitetext.header.button_right }}</a>
       </div>
     </div>
   </header>

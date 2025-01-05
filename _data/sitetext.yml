@@ -1,0 +1,282 @@
+#
+# Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
+#
+# Configuration: Add to _config.yml
+# locale: "en-US"  [YOUR PREFERRED LOCALE]
+#
+# How to use:
+# {{ site.data.ui-text[site.locale].<var_name> | default: 'text' }}
+
+# English (default)
+# -----------------
+en: &DEFAULT_EN
+  header:
+    title: WWW 2025 Competition
+    text: SmartMem:MemoryFailure Prediction for Reliable Cloud Service
+    button: Tell Me More
+    buttonlink: "#overview"
+
+  overview:
+    title: Competition Overview
+    body: "In ever-growing datacenters, millions of servers operate
+together to meet the rising demand for cloud computing,
+big data storage, and AI computing tasks. With numerous
+tasks including resource-intensive AI computations running
+on these servers, hardware failures significantly impact the
+servers’ Reliability, Availability and Serviceability (RAS).
+ In this tutorial, we explore cutting-edge methodologies for
+predicting hardware failures in cloud environments to ensure
+uninterrupted service continuity and optimal performance."
+    section: overview
+
+  target:
+    title: Target
+    body: "The tutorial targets for researchers and engineers in the field
+of system reliability and machine learning. The participants
+are expected to have a basic understanding of computer
+architecture, hardware errors and machine learning. If not, we
+also provide intuitive descriptions for interested participants
+during the tutorial. Anyone excited about ML for system is
+welcome. The expected audience size is around 50 to 150. No
+special technical equipment is needed and some way of taking
+notes is suggested."
+    section: target
+
+
+  agenda:
+    title: Agenda
+    body: "### Introduction (Min Zhou, 20 min)
+
+    - Overview of hardware failures in datacenters
+
+    – Motivation
+
+    – Business application
+
+    ### Memory Failure Prediction (Qiao Yu, 45 min)
+
+    - Background of memory failure
+
+    – Hierarchical memory failure prediction
+
+    – Conclusion and future work
+
+    ### HBM Failure Prediction and Reliable Storage System  (Zhirong Shen, 45 min)
+
+    – Introduce analysis of HBM errors in the field
+
+    – Introduce HBM failure prediction framework
+
+    – Introduce some techniques for reliable storage
+
+    ### AIOps for HDD and Optical Failure Prediction (Jorge Cardoso, 45 min)
+
+    – Background. Hard drives and optical interconnects are typical hardware found datacenters.
+
+    – Approach. Use classical and deep neural networks to predict failures.
+
+    – Conclusion. SMART indicators and error rates are suitable predictors for failures.
+
+    ### Competition Highlights (Min Zhou and Invited Participants, 60 min)
+
+    – Overview of the competition
+
+    – Participant solutions
+
+    – Open discussion and wrap-up
+    "
+    section: agenda
+
+
+  organizers1:
+    title: Organizing Committee
+    body: "- **Qiao Yu** (Technical University of Berlin, Germany)
+    
+    - **Min Zhou** (Huawei Technologies Co., Ltd, China)
+    
+    - **Zhirong Shen** (Xiamen University, Xiamen, China)
+    
+    - **Jorge Cardoso** (Huawei Cloud in Munich, Germany)"
+    section: organizers1
+
+  organizers2:
+    title: Competition Committee
+    body: "- **Min Zhou** (Huawei Technologies Co., Ltd, China)
+    
+    - **Qiao Yu** (Technical University of Berlin, Germany)
+    
+    - **Jialiang Yu** (Huawei Technologies Co., Ltd, China)
+    
+    - **Wengui Zhang** (Huawei Technologies Co., Ltd, China)
+    
+    - **Hongyi Xie** (Huawei Technologies Co., Ltd, China)
+    
+    - **Zhenli Sheng** (Huawei Technologies Co., Ltd, China)
+    
+    - **Odej Kao** (Technical University of Berlin, Germany)"
+    section: organizers2
+
+  competition:
+    title: Competition
+    body: "Our competition will furnish participants with a dataset comprising memory system configurations, memory 
+    error logs, and failure tags. This dataset will enable participants to devise solutions for predicting potential 
+    failures of individual DRAM modules within a subsequent observation period.
+    
+    The competition comprises two stages. The initial stage features an AB List setup, which includes training data 
+    tailored for two diverse memory models. Subsequently, in the second stage, a fresh dataset encompassing mixed 
+    models (more than two) will be introduced. This encourages solutions with few-shot learning capabilities and 
+    knowledge transfer ability.
+
+    Overall, the competition’s appeal lies in its practical relevance, the accessible entry point of the initial stage,
+     and the fresh challenges presented in both stages.
+     
+    More details of the competition can be found at 
+    <a href='https://www.codabench.org/competitions/3586/?secret_key=7bb5caa7-e581-42e6-a19b-366ca5f9ae7b' target='_blank'>
+    Memory Failure Prediction Competition</a>."
+    section: competition
+
+#  services:
+#    title: "Services"
+#    text: "Lorem ipsum"
+#    section: services
+#    list:
+#      - title: "E-Commerce"
+#        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+#        icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
+#      - title: "Responsive Design"
+#        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+#        icon: fas fa-laptop
+#      - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
+#        desc: "Your description here, full **Markdown** support"
+#        icon: fab fa-markdown
+#
+#  portfolio:
+#    title: "Portfolio"
+#    text: "Lorem ipsum dolor sit amet consectetur."
+#    section: portfolio
+#    closebutton: "Close Project"
+#
+#  timeline:
+#    title: "Timeline"
+#    text: "Lorem ipsum timeline"
+#    section: timeline
+#    # left is the default
+#    #start_align: "left"
+#    events:
+#      - title: "Our Humble Beginnings"
+#        year: "2009-2011"
+#        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+#        image: assets/img/timeline/1.jpg
+#        alt:
+#      - title: "An Agency is Born"
+#        year: "March 2011"
+#        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+#        image: assets/img/timeline/2.jpg
+#        alt:
+#      - title: "Jekyll Theme is created"
+#        year: "2019"
+#        desc: "Ravi Riley converted Agency, a Bootstrap-based theme, into a Jekyll theme. The Jekyll theme can be installed as a Ruby gem, or remotely. For more information, visit the documentation."
+#        image: assets/img/timeline/3.jpg
+#        alt: image alt text
+#      - title: "Title"
+#        year: "2009-2011"
+#        desc: "Your description here, **Markdown** is fully supported."
+#        image: assets/img/timeline/4.jpg
+#        alt:
+#        # you can enforce the alignment
+#        align: right
+#    end: "Be Part <br> of Our <br> Story!"
+#
+#  about:
+#    title: "About Us"
+#    text: "our story"
+#    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
+#    section: about
+
+  clients:
+    section: clients
+    max-height: 100px
+    horizontal-scrolling: "" #"yes/no"
+    list:
+#      - title: "huawei"
+#        url: https://www.huawei.com/en/
+#        logo: assets/img/huawei.png
+      - title: "huawei cloud"
+        url: https://www.huaweicloud.com/lab/reliability/home.html
+        logo: assets/img/huawei_cloud.png
+#      - title: "mfp competition"
+#        url: https://www.codabench.org/competitions/3586/?secret_key=7bb5caa7-e581-42e6-a19b-366ca5f9ae7b
+#        logo: assets/img/mfp_logo.png
+#  team:
+#    title: "OUR AMAZING TEAM"
+#    text: "Lorem ipsum dolor sit amet consectetur."
+#    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
+#    section: team
+#    people:
+#      - name: "Kay Garland"
+#        role: "Lead Designer"
+#        image: assets/img/team/500x500.jpg
+#        social:
+#          - url: https://twitter.com
+#            icon: fab fa-twitter
+#          - url: https://facebook.com
+#            icon: fab fa-facebook-f
+#          - url: https://linkedin.com
+#            icon: fab fa-linkedin-in
+#      - name: "Larry Parker"
+#        role: "Lead Marketer"
+#        image: assets/img/team/2.jpg
+#        social:
+#          - url: https://twitter.com
+#            icon: fab fa-twitter
+#          - url: https://facebook.com
+#            icon: fab fa-facebook-f
+#          - url: https://linkedin.com
+#            icon: fab fa-linkedin-in
+#      - name: "Diana Perterson"
+#        role: "Lead Developer"
+#        image: assets/img/team/500x500.jpg
+#        social:
+#          - url: https://twitter.com
+#            icon: fab fa-twitter
+#          - url: https://facebook.com
+#            icon: fab fa-facebook-f
+#          - url: https://linkedin.com
+#            icon: fab fa-linkedin-in
+#
+#  contact:
+#    title: "Contact Us"
+#    text: "Lorem ipsum or call 123456789"
+#    section: contact
+#    name: "Name*"
+#    name-validation: "Please enter your name."
+#    email: "Email*"
+#    email-validation: "Please enter your email address."
+#    phone: "Phone Number"
+#    phone-validation: "Please enter your phone number."
+#    message: "Message*"
+#    message-validation: "Please enter a message."
+#    subject: "Contact Form Submission"
+#    submit: "Send Message"
+
+  footer:
+    legal: "Privacy Policy"
+    social:
+#      - url: https://twitter.com
+#        icon: "fab fa-twitter"
+#      - url: https://facebook.com
+#        icon: "fab fa-facebook-f"
+#      - url: https://linkedin.com
+#        icon: "fab fa-linkedin-in"
+      - url: https://github.com
+        icon: "fab fa-github"
+      - url: https://www.codabench.org/competitions/3586/?secret_key=7bb5caa7-e581-42e6-a19b-366ca5f9ae7b
+        icon: "fas fa-flag-checkered"
+en-US:
+  <<: *DEFAULT_EN
+en-CA:
+  <<: *DEFAULT_EN
+en-GB:
+  <<: *DEFAULT_EN
+en-AU:
+  <<: *DEFAULT_EN

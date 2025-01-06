@@ -4,6 +4,14 @@ title: Terms and Conditions
 background: grey
 ---
 
+<style>
+  .content {
+    line-height: 1.5;
+  }
+</style>
+
+<div class="content">
+
 <div class="col-lg-12 text-center">
 	<h2 class="section-heading text-uppercase">
         Terms and Conditions
@@ -84,3 +92,5 @@ We may update the terms from time to time for personal, operational, legal, or r
 
 For more information about our privacy practices or if you have questions, please contact us by email
 at <a href="{{ site.email }}">{{ site.email }}</a>.
+
+</div>

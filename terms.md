@@ -39,14 +39,15 @@ including any prototype or executable code provided on the Competition Website. 
 private and public test sets. Which data belongs to which set will not be made available to participants.
 
 <blockquote>
-
-**Data Access and Use**
-
-- Usage Scope: You may access and use the Competition Data for non-commercial purposes only, including for
-  participating in the Competition and on Kaggle.com forums, and for academic research and education.
-- Violation Handling: The Competition Sponsor reserves the right to disqualify any participant who uses the
-  Competition Data other than as permitted by the Competition Website and these Rules.
-
+  <p><strong>Data Access and Use</strong></p>
+  <ul>
+    <li>
+      <strong>Usage Scope</strong>: You may access and use the Competition Data for non-commercial purposes only, including for participating in the Competition and on Kaggle.com forums, and for academic research and education.
+    </li>
+    <li>
+      <strong>Violation Handling</strong>: The Competition Sponsor reserves the right to disqualify any participant who uses the Competition Data other than as permitted by the Competition Website and these Rules.
+    </li>
+  </ul>
 </blockquote>
 
 The Competition Data is also subject to the following terms and

@@ -1,9 +1,8 @@
 <!-- Overview -->
 <section class="page-section" id="{{ site.data.sitetext[site.locale].overview.section | default: 'overview' }}">
   <style>
-    /* 定义样式 */
+    /* 通用样式 */
     .announcement-banner {
-      background-color: #E6F7FF;
       padding: 15px 20px;
       margin-bottom: 60px;
       border-radius: 10px;
@@ -11,6 +10,18 @@
       margin-left: 20px;
       margin-right: 20px;
       width: 100%;
+    }
+
+    /* 第一个横幅 */
+    .announcement-banner:nth-child(1) {
+      background-color: #E6F7FF;
+      border-color: #B3E5FC;
+    }
+
+    /* 第二个横幅 */
+    .announcement-banner:nth-child(2) {
+      background-color: #FFF3E0;
+      border-color: #FFE0B2;
     }
 
     /* 链接样式 */
@@ -23,11 +34,19 @@
       text-decoration: underline; /* 鼠标悬停时显示下划线 */
     }
   </style>
+
 <div class="container">
   <div class="row">
     <div class="col-lg-12 mx-auto">
       <div class="announcement-banner">
-        🚩 This challenge is a part of <a href="https://www2025.thewebconf.org/accepted-competitions" target="_blank">The Web Conference 2025.</a></li>
+        🏆 This challenge is a part of <a href="https://www2025.thewebconf.org/accepted-competitions" target="_blank">The Web Conference 2025</a>.
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 mx-auto">
+      <div class="announcement-banner">
+        🚩 See more details: <a href="https://www.codabench.org/competitions/3586" target="_blank">Competition Page</a>.
       </div>
     </div>
   </div>

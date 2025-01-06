@@ -209,12 +209,22 @@ notes is suggested."
     max-height: 100px
     horizontal-scrolling: "" #"yes/no"
     list:
-#      - title: "huawei"
-#        url: https://www.huawei.com/en/
-#        logo: assets/img/huawei.png
-      - title: "huawei cloud"
-        url: https://www.huaweicloud.com/lab/reliability/home.html
-        logo: assets/img/huawei_cloud.png
+      - title: "Huawei"
+        url: https://www.huawei.com/en/
+        logo: assets/img/huawei.png
+      - title: "TU Berlin"
+        url: https://www.tu.berlin/en/
+        logo: assets/img/TUberlin.png
+      - title: "USTC"
+        url: https://en.ustc.edu.cn/
+        logo: assets/img/USTC.png
+      - title: "UC"
+        url: https://www.uc.pt/en/
+        logo: assets/img/UC.png
+
+#      - title: "huawei cloud"
+#        url: https://www.huaweicloud.com/lab/reliability/home.html
+#        logo: assets/img/huawei_cloud.png
 #      - title: "mfp competition"
 #        url: https://www.codabench.org/competitions/3586/?secret_key=7bb5caa7-e581-42e6-a19b-366ca5f9ae7b
 #        logo: assets/img/mfp_logo.png

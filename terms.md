@@ -1,39 +1,85 @@
 ---
 layout: page
-title: Privacy Policy
+title: Terms and Conditions
 background: grey
 ---
 
 <div class="col-lg-12 text-center">
-	<h2 class="section-heading text-uppercase">Privacy Policy</h2>
+	<h2 class="section-heading text-uppercase">
+        Terms and Conditions
+    </h2>
 </div>
 
-This Privacy Policy describes how your personal information is collected, used, and shared when you visit {{ site.title }} (the “Site”).
+The challenge is committed to fostering an inclusive, fair, and impactful competition. The rules outlined below are
+designed to ensure that all participants have a clear understanding of what is expected and to create an environment
+conducive to innovation and collaboration.
 
-**PERSONAL INFORMATION WE COLLECT**
+#### Eligibility
 
-{% if site.analytics.google %}
+The competition is open to all individuals and teams, regardless of their academic, professional, or
+geographical background. We encourage diversity in participation to foster a wide range of perspectives and solutions.
+To be eligible for prizes, winning teams are required to share their methods, code, and models with the organizers as
+well as the names and associations of each team member.
 
-Automatically Collected (Google Analytics):
+#### Registration
 
-When you visit the Site, we automatically receive information about your device from your browser, such as your IP address. As you browse the Site, we also collect information about how you interact with the Site. We refer to this automatically-collected information as “Device Information”.
+All participants must register on codabench before the deadline. Registration is free but required to
+access the datasets and starting kit.
 
-We collect Device Information using cookies. “Cookies” are data files that are placed on your device. For more information about cookies and how to disable them, visit http://www.allaboutcookies.org.
+#### Submission Guidelines
 
-We do this using Google Analytics: <https://www.google.com/intl/en/policies/privacy/>.
+Participants must submit their results, through the designated submission platform by the
+specified deadline. Late submissions will not be considered for evaluation. The top teams on the leaderboard will be
+required to submit their source code for the final evaluation.
 
-You can opt-out of Google Analytics here: <https://tools.google.com/dlpage/gaoptout>.
+#### Data
 
-{% else %}
+The provided datasets are available from the Competition Website for the purpose of use in the Competition,
+including any prototype or executable code provided on the Competition Website. The Competition Data will contain
+private and public test sets. Which data belongs to which set will not be made available to participants.
 
-We do not collect any data about you or use any cookies.
+<blockquote>
 
-{% endif %}
+**Data Access and Use**
 
-**CHANGES**
+- Usage Scope: You may access and use the Competition Data for non-commercial purposes only, including for
+  participating in the Competition and on Kaggle.com forums, and for academic research and education.
+- Violation Handling: The Competition Sponsor reserves the right to disqualify any participant who uses the
+  Competition Data other than as permitted by the Competition Website and these Rules.
 
-We may update this privacy policy from time to time for personal, operational, legal, or regulatory reasons.
+</blockquote>
 
-**CONTACT US**
+The Competition Data is also subject to the following terms and
+conditions: [CC BY-NC 4.0 (Attribution-NonCommercial 4.0 International)](https://creativecommons.org/licenses/by-nc/4.0/).
+To the extent that the terms and conditions located at the URL conflict with or are inconsistent with these Rules, these
+Rules will govern your use of the Competition Data.
 
-For more information about our privacy practices or if you have questions, please contact us by email at <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
+<blockquote>
+
+**Data Security**
+
+- Security Measures: You agree to use reasonable and suitable measures to prevent persons who have not formally
+  agreed to these Rules from gaining access to the Competition Data.
+- Data Sharing Restrictions: You agree not to transmit, duplicate, publish, redistribute, or otherwise provide or
+  make available the Competition Data to any party not participating in the Competition.
+
+</blockquote>
+
+#### Original Work
+
+All submissions must be the original work of the participants. Plagiarism or the use of unauthorized
+materials will result in disqualification.
+
+#### Publication of Results
+
+The organizers reserve the right to publish the results of the competition, including the names
+and affiliations of winners. Participants must agree to the publication of their results as a condition of entry.
+
+#### Changes
+
+We may update the terms from time to time for personal, operational, legal, or regulatory reasons.
+
+#### Contact us
+
+For more information about our privacy practices or if you have questions, please contact us by email
+at <a href="{{ site.email }}">{{ site.email }}</a>.

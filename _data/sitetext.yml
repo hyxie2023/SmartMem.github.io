@@ -55,48 +55,9 @@ notes is suggested."
 
 
   agenda:
-    title: Agenda
-    body: "### Introduction (Min Zhou, 20 min)
-
-    - Overview of hardware failures in datacenters
-
-    – Motivation
-
-    – Business application
-
-    ### Memory Failure Prediction (Qiao Yu, 45 min)
-
-    - Background of memory failure
-
-    – Hierarchical memory failure prediction
-
-    – Conclusion and future work
-
-    ### HBM Failure Prediction and Reliable Storage System  (Zhirong Shen, 45 min)
-
-    – Introduce analysis of HBM errors in the field
-
-    – Introduce HBM failure prediction framework
-
-    – Introduce some techniques for reliable storage
-
-    ### AIOps for HDD and Optical Failure Prediction (Jorge Cardoso, 45 min)
-
-    – Background. Hard drives and optical interconnects are typical hardware found datacenters.
-
-    – Approach. Use classical and deep neural networks to predict failures.
-
-    – Conclusion. SMART indicators and error rates are suitable predictors for failures.
-
-    ### Competition Highlights (Min Zhou and Invited Participants, 60 min)
-
-    – Overview of the competition
-
-    – Participant solutions
-
-    – Open discussion and wrap-up
-    "
+    title: Timeline
     section: agenda
+    timeline: assets/img/timeline.PNG
 
 
   organizers1:

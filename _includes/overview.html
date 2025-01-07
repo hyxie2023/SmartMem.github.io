@@ -136,6 +136,28 @@
             <div class="col-lg-12 mx-auto">
                 <div class="large text-muted">
                     <p>
+                        Our goal is to predict whether each DRAM module will experience an Uncorrectable Error (UE)
+                        failure within the next k days, framing the problem as a binary classification task. To support
+                        this, we provide participants with a comprehensive dataset that includes memory system
+                        configurations, memory error logs, and failure tags. This dataset serves as the foundation for
+                        developing solutions to predict potential failures of individual DRAM modules during a specified
+                        observation period.
+                    </p>
+                    <p>
+                        The competition is designed to combine practical relevance with an accessible entry point in the
+                        initial stage, while also introducing fresh challenges across both stages to engage participants
+                        and drive innovative solutions.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-12 mx-auto">
+                <h4 style="border-bottom: 2px solid #eee; padding-bottom: 10px;">{{
+                    site.data.sitetext[site.locale].overview.title3 |
+                    default: "Background" }}</h4>
+            </div>
+            <div class="col-lg-12 mx-auto">
+                <div class="large text-muted">
+                    <p>
                         <strong>DRAM components and errors:</strong> The figure below illustrates the DRAM organization
                         within a server. The basic unit of
                         installation is a <a
@@ -170,6 +192,9 @@
                         figure below. Utilizing memory failure prediction allows for the anticipation of failures and
                         the activation of corresponding mitigation techniques based on specific use cases.
                     </p>
+                    <img class="img-fluid d-block mx-auto"
+                         src="{{ site.data.sitetext[site.locale].overview.memorganization }}" alt="memorganization"
+                         style="max-height: 360px">
                 </div>
             </div>
         </div>

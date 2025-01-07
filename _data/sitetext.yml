@@ -21,8 +21,10 @@ en: &DEFAULT_EN
   overview:
     title: Competition Overview
     title1: Background
-    title2: Memory Architecture, Access, and Mitigation
+    title2: Goal
+    title3: Memory Architecture, Access, and Mitigation
     memstructure: assets/img/mem_structure.jpg
+    memorganization: assets/img/mem_organization.jpg
     section: overview
 
   evaluation:

@@ -1,0 +1,17 @@
+<!-- Dataset -->
+<section class="bg-light page-section" id="{{ site.data.sitetext[site.locale].dataset.section | default: 'dataset' }}">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].dataset.title | default: "dataset" }}</h2>
+      <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].dataset.text | default: "" }}</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 mx-auto">
+      <div class="large text-muted">{{ site.data.sitetext[site.locale].dataset.body | markdownify }}</div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- End Dataset -->

@@ -13,8 +13,8 @@ en: &DEFAULT_EN
   nav:
     - title: "Overview"
       section: overview
-    - title: "Target"
-      section: target
+    - title: "Dataset"
+      section: dataset
     - title: "Evaluation"
       section: evaluation
     - title: "Timeline"

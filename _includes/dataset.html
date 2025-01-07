@@ -12,18 +12,20 @@
         <div class="row">
             <div class="col-lg-12 mx-auto">
                 <div class="large text-muted">
-                    <p>The dataset includes log files collected via mcelog, with each file named by the serial number of
-                        the DIMM. The data contains 21 columns, such as CPU ID, channel ID, DIMM ID, rank ID, device ID,
-                        bank group ID, bank ID, row ID, column ID, and more. These columns provide detailed information
-                        about the DRAM errors and system configurations.</p>
-                    <p><strong>failure_ticket.csv</strong> includes the failures of each DIMM in this dataset, with
-                        columns for serial number, failure time, and server type.</p>
-                    <p><strong>submission.csv</strong> requires predictions for DIMM failures, including the serial
-                        number, server type, and prediction timestamp. Multiple timestamps are allowed for each DIMM.
+                    <p>
+                        The dataset includes log files collected via mcelog, with each file named by the serial number
+                        of the DIMM. <strong>train.zip and test.zip</strong> contain logs with 21 columns, such as CPU
+                        ID, channel ID, DIMM ID, rank ID, device ID, bank group ID, bank ID, row ID, column ID, and
+                        more, providing detailed information about
+                        DRAM errors and system configurations. Additionally, <strong>failure_ticket.csv</strong> records
+                        the failures of each DIMM, including serial number, failure time, and server type, while
+                        <strong>submission.csv</strong> requires predictions for DIMM failures, with columns for serial
+                        number, server type, and prediction timestamp (multiple timestamps are allowed for each DIMM).
+                        Note that the DIMM manufacturer, part number, and other sensitive information have been
+                        anonymized to ensure privacy.
                     </p>
-                    <p>Note that we have anonymized the DIMM manufacturer, part number, and other sensitive information
-                        to ensure privacy.</p>
-                    <div class="announcement-banner" style="background-color: #F3E5F5; border-color: #CE93D8; padding: 15px 20px; margin-bottom: 40px; border-radius: 10px; border: 1px solid #CE93D8; margin-left: 20px; margin-right: 20px; width: 100%;">
+                    <div class="announcement-banner"
+                         style="background-color: #F3E5F5; border-color: #CE93D8; padding: 15px 20px; margin-bottom: 40px; border-radius: 10px; border: 1px solid #CE93D8; margin-left: 20px; margin-right: 20px; width: 100%;">
                         <p style="margin-top: 30px;">
                             For more details, please refer to
                             <a href="dataset" target="_blank" style="color: #007bff; text-decoration: none;">

@@ -11,6 +11,8 @@
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].evaluation.title |
                     default: "evaluation" }}</h2>
+                <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].target.text | default: ""
+                    }}</h3>
             </div>
         </div>
         <div class="row">
@@ -19,15 +21,54 @@
                     <p>
                         Our goal is to predict whether each DRAM will experience an Uncorrectable Error (UE) failure
                         within the next \( k \) days. Thus, the problem is formulated as a binary classification
-                        problem. The evaluation protocol, as illustrated in Figure 3, is designed based on production
+                        problem.
+                    </p>
+                    <p>
+                        The evaluation protocol, as illustrated in Figure 3, is designed based on production
                         requirements. Specifically, at the current time \( t \), an algorithm observes historical data
                         from an observation window \( \Delta t_d \) to predict failures within the prediction interval
-                        \([t + \Delta t_l, t + \Delta t_l + \Delta t_p]\), where \( \Delta t_l \) is the minimum time
+                        \([t + \Delta t_l, t + \Delta t_l + \Delta t_p]\). Here, \( \Delta t_l \) is the minimum time
                         interval between the prediction (i.e., lead time) and the failure, and \( \Delta t_p \) denotes
-                        the prediction interval. For evaluation, the lead prediction window is fixed to 15 minutes (\(
-                        \Delta t_l \)), and the prediction window is set to 7 days (\( \Delta t_p \)). However,
-                        participants are free to explore the observation window and labeling methods for training.
+                        the prediction interval.
                     </p>
+                    <p>
+                        For evaluation, the lead prediction window is fixed to 15 minutes (\( \Delta t_l \)), and the
+                        prediction window is set to 7 days (\( \Delta t_p \)). However, participants are free to explore
+                        the observation window and labeling methods for training.
+                    </p>
+
+                    <!-- F1 Score Formula -->
+                    <p>
+                        The \( F1 \) score is calculated as:
+                        \[
+                        F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
+                        \]
+                    </p>
+
+                    <!-- Precision and Recall Formulas -->
+                    <p>
+                        Precision and Recall are defined as:
+                        \[
+                        \text{Precision} = \frac{TP}{TP + FP}
+                        \]
+                        \[
+                        \text{Recall} = \frac{TP}{TP + FN}
+                        \]
+                    </p>
+
+                    <!-- Definitions of TP, FP, FN, TN -->
+                    <p>
+                        The terms used in the formulas are defined as follows:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>True Positive (TP)</strong>: A correctly predicted failure within the prediction
+                            window \([t + \Delta t_l, t + \Delta t_l + \Delta t_p]\).
+                        </li>
+                        <li><strong>False Positive (FP)</strong>: An incorrect prediction of a failure.</li>
+                        <li><strong>False Negative (FN)</strong>: A failure without a prior alarm.</li>
+                        <li><strong>True Negative (TN)</strong>: No failures are predicted or occur.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -41,12 +82,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"></script>
 <script>
     // 在页面加载完成后渲染 LaTeX 公式
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         renderMathInElement(document.body, {
             // 配置选项（可选）
             delimiters: [
-                { left: "\\(", right: "\\)", display: false }, // 行内公式
-                { left: "\\[", right: "\\]", display: true }   // 独立公式
+                {left: "\\(", right: "\\)", display: false}, // 行内公式
+                {left: "\\[", right: "\\]", display: true}   // 独立公式
             ],
             throwOnError: false // 忽略渲染错误
         });

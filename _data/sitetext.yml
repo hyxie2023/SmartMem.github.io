@@ -22,6 +22,7 @@ en: &DEFAULT_EN
     title: Competition Overview
     title1: Background
     title2: Memory Architecture, Access, and Mitigation
+    memstructure: assets/img/mem_structure.jpg
     section: overview
 
   evaluation:

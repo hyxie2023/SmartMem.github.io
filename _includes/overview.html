@@ -23,6 +23,26 @@
             background-color: #FFF3E0;
             border-color: #FFE0B2;
         }
+
+        /* 链接样式 */
+        .announcement-banner a {
+            color: #007bff; /* 链接颜色 */
+            text-decoration: none; /* 去掉下划线 */
+        }
+
+        .announcement-banner a:hover {
+            text-decoration: underline; /* 鼠标悬停时显示下划线 */
+        }
+
+        /* 链接样式 */
+        .blue-link a {
+            color: #007bff; /* 链接颜色 */
+            text-decoration: none; /* 去掉下划线 */
+        }
+
+        .blue-link a:hover {
+            text-decoration: underline; /* 鼠标悬停时显示下划线 */
+        }
     </style>
 
     <div class="container">
@@ -81,9 +101,8 @@
             <div class="col-lg-12 mx-auto">
                 <div class="large text-muted">
                     <p>
-                        Uncorrectable Errors (UEs) of <a
-                            href="https://en.wikipedia.org/wiki/Dynamic_random-access_memory" target="_blank">Dynamic
-                        random-access memory (DRAM)</a> have been identified as a
+                        Uncorrectable Errors (UEs) of Dynamic
+                        random-access memory (DRAM) have been identified as a
                         major failure cause in data centers. The multi-bit UE failure of <a
                             href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory" target="_blank">High Bandwidth
                         Memory (HBM)</a> poses a significant threat to the availability and reliability
@@ -117,31 +136,39 @@
             <div class="col-lg-12 mx-auto">
                 <div class="large text-muted">
                     <p>
-                        Uncorrectable Errors (UEs) of <a
-                            href="https://en.wikipedia.org/wiki/Dynamic_random-access_memory" target="_blank">Dynamic
-                        random-access memory (DRAM)</a> have been identified as a
-                        major failure cause in data centers. The multi-bit UE failure of <a
-                            href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory" target="_blank">High Bandwidth
-                        Memory (HBM)</a> poses a significant threat to the availability and reliability
-                        of servers and entire computing clusters.
-                        Forecasting UEs before enacting preemptive maintenance measures has emerged as a viable strategy
-                        for diminishing server outages. Several machine-learning based solutions have also been
-                        proposed.
+                        <strong>DRAM components and errors:</strong> The figure below illustrates the DRAM organization
+                        within a server. The basic unit of
+                        installation is a <a
+                            href="https://en.wikipedia.org/wiki/DIMM" target="_blank">Dual
+                        In-Line Memory Module (DIMM)</a>. At a fundamental level, a DIMM consists of
+                        multiple DRAM chips grouped into ranks, enabling simultaneous access during DRAM read/write
+                        operations within the same rank. Each chip contains multiple banks that operate in parallel.
+                        These banks are further divided into rows and columns, with the intersection of a row and column
+                        constituting a cell capable of storing a single data bit. Cells can store multiple bits, and the
+                        data width of a chip, denoted as x4, x8, or x16, signifies the number of data bits stored in a
+                        cell.
                     </p>
                     <p>
-                        However, predicting UEs presents several challenges: data noise and extreme class imbalance, as
-                        UEs are exceptionally rare in memory events; heterogeneous data sources, since DRAMs in
-                        operational environments originate from diverse manufacturing or architectural platforms;
-                        distribution shifts caused by hardware aging; and latent factors introduced by the dynamic
-                        access mechanisms of memory.
+                        A DRAM error occurs when the DRAM exhibits abnormal behavior, resulting in one or more
+                        bits being read differently from their written values. Modern DRAM implementations utilize
+                        <a href="https://en.wikipedia.org/wiki/Error_correction_code" target="_blank">Error correction
+                            code (ECC)</a> to safeguard against DRAM errors.
                     </p>
+                    <img class="img-fluid d-block mx-auto"
+                         src="{{ site.data.sitetext[site.locale].overview.memstructure }}" alt="memstructure"
+                         style="max-height: 360px">
                     <p>
-                        We cure a real-world memory error dataset that contains both micro-level and bit-level
-                        information and
-                        present a two-stage challenge for more efficient and generalizable event prediction solutions.
-                        We believe the competition will serve as a fertile ground for fostering discussions and
-                        advancing
-                        research on several important research topics towards real-world ML applications.
+                        <strong>Memory Access and RAS:</strong> The figure below depicts the transmission process of x4
+                        <a href="https://en.wikipedia.org/wiki/DDR4_SDRAM" target="_blank">DRAM Double Data
+                            Rate 4 (DDR4)</a> chips via DQs. Upon initiating a data request, 8 beats—each
+                        consisting of 72 bits (64 data bits and 8 ECC bits)—are transferred to the memory controller via
+                        DQ wires. By implementing contemporary ECC, the 72-bit data are distributed across 18 DRAM
+                        chips, enabling the memory controller to detect and correct errors, as shown in the figure
+                        below. Note that ECC checking bits' addresses are decoded to locate specific errors in DQs and
+                        beats. Subsequently, all logs, including error detection and correction, events, and memory
+                        specifications, are archived in the Baseboard Management Controller (BMC), as illustrated in the
+                        figure below. Utilizing memory failure prediction allows for the anticipation of failures and
+                        the activation of corresponding mitigation techniques based on specific use cases.
                     </p>
                 </div>
             </div>

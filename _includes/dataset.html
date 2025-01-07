@@ -109,7 +109,8 @@
                                 </td>
                             </tr>
                             <tr style="border-bottom: 1px solid #ddd;">
-                                <td style="padding: 12px 15px; text-align: left; color: #555;">retry_rd_err_log_parity</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">retry_rd_err_log_parity
+                                </td>
                                 <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
                                     integer
                                 </td>
@@ -217,7 +218,8 @@
                             </tbody>
                         </table>
                     </div>
-                    <p><strong>failure_ticket.csv</strong> includes the failures of each DIMM in this dataset in 3
+                    <p style="margin-top: 30px"><strong>failure_ticket.csv</strong> includes the failures of each DIMM
+                        in this dataset in 3
                         columns. The columns are defined as follows:</p>
                     <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                         <table style="width: 100%; border-collapse: collapse; background-color: #fff; border-radius: 8px; overflow: hidden;">
@@ -263,6 +265,60 @@
                             </tbody>
                         </table>
                     </div>
+                    <p>Note that we have annoymized the DIMM manufacturer, part number, etc to avoid sensitive
+                        information being inferred.</p>
+                    <p style="margin-top: 30px"><strong>submission.csv</strong> includes the serial_number,
+                        serial_number_type and prediction_timestamp, where prediction_timestamp represents the time when
+                        DIMM failures are predicted. The submission format allows multiple timestamps predictions as
+                        below:</p>
+                    <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                        <table style="width: 100%; border-collapse: collapse; background-color: #fff; border-radius: 8px; overflow: hidden;">
+                            <thead>
+                            <tr>
+                                <th style="padding: 12px 15px; text-align: left; background-color: #2196F3; color: white; font-weight: bold;">serial_number</th>
+                                <th style="padding: 12px 15px; text-align: left; background-color: #2196F3; color: white; font-weight: bold;">prediction_timestamp</th>
+                                <th style="padding: 12px 15px; text-align: left; background-color: #2196F3; color: white; font-weight: bold;">serial_number_type</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">sn_1xx</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">1708987825</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">A</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">sn_1xx</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">1708987853</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">A</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">sn_2xx</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">1716206512</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">B</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <h2 style="color: #333; margin-bottom: 15px;">Files</h2>
+                    <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+                        <li style="color: #555; margin-bottom: 10px;">
+                            <strong>train.zip</strong> - the training set
+                        </li>
+                        <li style="color: #555; margin-bottom: 10px;">
+                            <strong>test.zip</strong> - the test set
+                        </li>
+                        <li style="color: #555; margin-bottom: 10px;">
+                            <strong>failure_ticket.csv</strong> - the failure labels
+                        </li>
+                        <li style="color: #555; margin-bottom: 10px;">
+                            <strong>sample.zip</strong> - the sample data
+                        </li>
+                        <li style="color: #555; margin-bottom: 10px;">
+                            <strong>sample_submission.csv</strong> - a sample submission file in the correct format
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

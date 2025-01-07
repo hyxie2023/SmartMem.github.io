@@ -24,12 +24,13 @@
                         problem.
                     </p>
                     <p>
-                        The evaluation protocol, as illustrated in Figure 3, is designed based on production
+                        The evaluation protocol, as illustrated in the figure below, is designed based on production
                         requirements. Specifically, at the current time \( t \), an algorithm observes historical data
                         from an observation window \( \Delta t_d \) to predict failures within the prediction interval
                         \([t + \Delta t_l, t + \Delta t_l + \Delta t_p]\). Here, \( \Delta t_l \) is the minimum time
                         interval between the prediction (i.e., lead time) and the failure, and \( \Delta t_p \) denotes
-                        the prediction interval.
+                        the prediction interval. For this competition, \( \Delta t_l \) is set to <strong>15
+                        minutes</strong>, and \( \Delta t_p \) is set to <strong>7 days</strong>.
                     </p>
                     <p>
                         For evaluation, the lead prediction window is fixed to 15 minutes (\( \Delta t_l \)), and the

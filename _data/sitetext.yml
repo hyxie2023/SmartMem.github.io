@@ -21,6 +21,7 @@ en: &DEFAULT_EN
   overview:
     title: Competition Overview
     title1: Background
+    title2: Memory Architecture, Access, and Mitigation
     section: overview
 
   evaluation:

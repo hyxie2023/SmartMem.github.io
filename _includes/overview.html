@@ -74,8 +74,44 @@
         </div>
         <div class="row">
             <div class="col-lg-12 mx-auto">
-                <h4 class="large text-muted" style="border-bottom: 2px solid #eee; padding-bottom: 10px;">{{
+                <h4 style="border-bottom: 2px solid #eee; padding-bottom: 10px;">{{
                     site.data.sitetext[site.locale].overview.title1 |
+                    default: "Background" }}</h4>
+            </div>
+            <div class="col-lg-12 mx-auto">
+                <div class="large text-muted">
+                    <p>
+                        Uncorrectable Errors (UEs) of <a
+                            href="https://en.wikipedia.org/wiki/Dynamic_random-access_memory" target="_blank">Dynamic
+                        random-access memory (DRAM)</a> have been identified as a
+                        major failure cause in data centers. The multi-bit UE failure of <a
+                            href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory" target="_blank">High Bandwidth
+                        Memory (HBM)</a> poses a significant threat to the availability and reliability
+                        of servers and entire computing clusters.
+                        Forecasting UEs before enacting preemptive maintenance measures has emerged as a viable strategy
+                        for diminishing server outages. Several machine-learning based solutions have also been
+                        proposed.
+                    </p>
+                    <p>
+                        However, predicting UEs presents several challenges: data noise and extreme class imbalance, as
+                        UEs are exceptionally rare in memory events; heterogeneous data sources, since DRAMs in
+                        operational environments originate from diverse manufacturing or architectural platforms;
+                        distribution shifts caused by hardware aging; and latent factors introduced by the dynamic
+                        access mechanisms of memory.
+                    </p>
+                    <p>
+                        We cure a real-world memory error dataset that contains both micro-level and bit-level
+                        information and
+                        present a two-stage challenge for more efficient and generalizable event prediction solutions.
+                        We believe the competition will serve as a fertile ground for fostering discussions and
+                        advancing
+                        research on several important research topics towards real-world ML applications.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-12 mx-auto">
+                <h4 style="border-bottom: 2px solid #eee; padding-bottom: 10px;">{{
+                    site.data.sitetext[site.locale].overview.title2 |
                     default: "Background" }}</h4>
             </div>
             <div class="col-lg-12 mx-auto">

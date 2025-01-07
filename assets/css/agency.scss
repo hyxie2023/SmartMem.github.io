@@ -16,7 +16,7 @@
   {% endfor %}
 {% endif %}
 
-// Custom colors
+// Custom colors 007bff fed136
 $primary: {{ site.data.style.highlight | default: "#007bff" }} !default;
 $white: {{ site.data.style.white | default: "#fff" }} !default;
 $black: {{ site.data.style.black | default: "#000" }} !default;

@@ -1,8 +1,8 @@
 <!-- Evaluation -->
 <head>
+    <!-- 引入 KaTeX 的 CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css">
 </head>
-
 
 <section class="bg-light page-section"
          id="{{ site.data.sitetext[site.locale].evaluation.section | default: 'evaluation' }}">
@@ -34,3 +34,21 @@
     </div>
 </section>
 <!-- End Evaluation -->
+
+<!-- 引入 KaTeX 的 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js"></script>
+<!-- 引入 auto-render 扩展 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js"></script>
+<script>
+    // 在页面加载完成后渲染 LaTeX 公式
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            // 配置选项（可选）
+            delimiters: [
+                { left: "\\(", right: "\\)", display: false }, // 行内公式
+                { left: "\\[", right: "\\]", display: true }   // 独立公式
+            ],
+            throwOnError: false // 忽略渲染错误
+        });
+    });
+</script>

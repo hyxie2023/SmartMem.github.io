@@ -15,12 +15,12 @@ en: &DEFAULT_EN
       section: overview
     - title: "Target"
       section: target
-    - title: "Agenda"
+    - title: "Timeline"
       section: agenda
+    - title: "Award"
+      section: award
     - title: "Organizers"
       section: organizers1
-    - title: "Competition"
-      section: competition
 en-US:
   <<: *DEFAULT_EN
 en-CA:

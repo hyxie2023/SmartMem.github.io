@@ -88,24 +88,9 @@ notes is suggested."
     - **Odej Kao** (Technical University of Berlin, Germany)"
     section: organizers2
 
-  competition:
-    title: Competition
-    body: "Our competition will furnish participants with a dataset comprising memory system configurations, memory 
-    error logs, and failure tags. This dataset will enable participants to devise solutions for predicting potential 
-    failures of individual DRAM modules within a subsequent observation period.
-    
-    The competition comprises two stages. The initial stage features an AB List setup, which includes training data 
-    tailored for two diverse memory models. Subsequently, in the second stage, a fresh dataset encompassing mixed 
-    models (more than two) will be introduced. This encourages solutions with few-shot learning capabilities and 
-    knowledge transfer ability.
-
-    Overall, the competition’s appeal lies in its practical relevance, the accessible entry point of the initial stage,
-     and the fresh challenges presented in both stages.
-     
-    More details of the competition can be found at 
-    <a href='https://www.codabench.org/competitions/3586/?secret_key=7bb5caa7-e581-42e6-a19b-366ca5f9ae7b' target='_blank'>
-    Memory Failure Prediction Competition</a>."
-    section: competition
+  award:
+    title: Award
+    section: award
 
 #  services:
 #    title: "Services"

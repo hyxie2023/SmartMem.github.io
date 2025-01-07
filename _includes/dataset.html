@@ -1,137 +1,271 @@
 <!-- Dataset -->
 <section class="bg-light page-section" id="{{ site.data.sitetext[site.locale].dataset.section | default: 'dataset' }}">
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12 text-center">
-      <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].dataset.title | default: "dataset" }}</h2>
-      <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].dataset.text | default: "" }}</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12 mx-auto">
-      <div class="large text-muted">{{ site.data.sitetext[site.locale].dataset.body | markdownify }}
-        <p>The dataset has four files:</p>
-        <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-          <table style="width: 100%; border-collapse: collapse; background-color: #fff; border-radius: 8px; overflow: hidden;">
-            <thead>
-            <tr>
-              <th style="padding: 12px 15px; text-align: left; background-color: #4CAF50; color: white; font-weight: bold;">Field</th>
-              <th style="padding: 12px 15px; text-align: left; background-color: #4CAF50; color: white; font-weight: bold;">Type</th>
-              <th style="padding: 12px 15px; text-align: left; background-color: #4CAF50; color: white; font-weight: bold;">Description</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">cpuid</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The CPU ID, note that a server attaches multiple CPUs</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">channelid</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The Channel ID, note that a CPU has multiple channels</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">dimmid</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The DIMM ID, note that a channel attaches multiple DIMMs</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">rankid</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The rank ID, range from 0 to 1, each DIMM has 1 or 2 ranks</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">deviceid</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The device ID, range from 0 to 17, each DIMM has multiple devices</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">bankgroupid</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The bank group ID of DRAM</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">bankid</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The bank ID of DRAM</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">rowid</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The row ID of DRAM</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">columnid</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The column ID of DRAM</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">retryrderrlogparity</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The parity error bits in memory DQ and Beat in decimal format</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">error_type</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The error type including read and scrubbing error</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">log_time</td>
-              <td style="padding: 12px 15px; text-align: left; color: #DC3545; font-weight: bold;">string</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The time when the error is detected in timestamp</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">manufacturter</td>
-              <td style="padding: 12px 15px; text-align: left; color: #007BFF; font-weight: bold;">category</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The server manufacturer in anonymized format</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">model</td>
-              <td style="padding: 12px 15px; text-align: left; color: #007BFF; font-weight: bold;">category</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The CPU model in anonymized format</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">PN</td>
-              <td style="padding: 12px 15px; text-align: left; color: #007BFF; font-weight: bold;">category</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The part number of DIMMs in anonymized format</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">Capacity</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The capacity of DIMM</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">FrequencyMHz</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">Base frequency of the CPU resource, in MHz</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">MaxSpeedMHz</td>
-              <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">integer</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">Maximum frequency of the CPU resource</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">McaBank</td>
-              <td style="padding: 12px 15px; text-align: left; color: #007BFF; font-weight: bold;">category</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">Machine Check Architecture bank code of the CPU</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">memory_type</td>
-              <td style="padding: 12px 15px; text-align: left; color: #DC3545; font-weight: bold;">string</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The type of DIMM, e.g., DDR4</td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 12px 15px; text-align: left; color: #555;">region</td>
-              <td style="padding: 12px 15px; text-align: left; color: #007BFF; font-weight: bold;">category</td>
-              <td style="padding: 12px 15px; text-align: left; color: #555;">The region of server location in anonymized format</td>
-            </tr>
-            </tbody>
-          </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].dataset.title | default:
+                    "dataset" }}</h2>
+                <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].dataset.text | default: ""
+                    }}</h3>
+            </div>
         </div>
-      </div>
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <div class="large text-muted">{{ site.data.sitetext[site.locale].dataset.body | markdownify }}
+                    <p>The dataset has four files:</p>
+                    <p><strong>train.zip / test.zip</strong> includes the log files named by serial_number of DIMM,
+                        collected via mcelog in 21
+                        columns. The columns are defined as follows:</p>
+                    <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                        <table style="width: 100%; border-collapse: collapse; background-color: #fff; border-radius: 8px; overflow: hidden;">
+                            <thead>
+                            <tr>
+                                <th style="padding: 12px 15px; text-align: left; background-color: #2196F3; color: white; font-weight: bold;">
+                                    Field
+                                </th>
+                                <th style="padding: 12px 15px; text-align: left; background-color: #2196F3; color: white; font-weight: bold;">
+                                    Type
+                                </th>
+                                <th style="padding: 12px 15px; text-align: left; background-color: #2196F3; color: white; font-weight: bold;">
+                                    Description
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">cpuid</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The CPU ID, note that a
+                                    server attaches multiple CPUs
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">channelid</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The Channel ID, note that
+                                    a CPU has multiple channels
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">dimmid</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The DIMM ID, note that a
+                                    channel attaches multiple DIMMs
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">rankid</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The rank ID, range from 0
+                                    to 1, each DIMM has 1 or 2 ranks
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">deviceid</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The device ID, range from
+                                    0 to 17, each DIMM has multiple devices
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">bankgroupid</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The bank group ID of
+                                    DRAM
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">bankid</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The bank ID of DRAM</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">rowid</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The row ID of DRAM</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">columnid</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The column ID of DRAM
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">retry_rd_err_log_parity</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The parity error bits in
+                                    memory DQ and Beat in decimal format
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">error_type</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The error type including
+                                    read and scrubbing error
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">log_time</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #DC3545; font-weight: bold;">
+                                    string
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The time when the error
+                                    is detected in timestamp
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">manufacture</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #007BFF; font-weight: bold;">
+                                    category
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The server manufacturer
+                                    in anonymized format
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">model</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #007BFF; font-weight: bold;">
+                                    category
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The CPU model in
+                                    anonymized format
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">PN</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #007BFF; font-weight: bold;">
+                                    category
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The part number of DIMMs
+                                    in anonymized format
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">Capacity</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The capacity of DIMM</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">FrequencyMHz</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">Base frequency of the CPU
+                                    resource, in MHz
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">MaxSpeedMHz</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
+                                    integer
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">Maximum frequency of the
+                                    CPU resource
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">McaBank</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #007BFF; font-weight: bold;">
+                                    category
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">Machine Check
+                                    Architecture bank code of the CPU
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">memory_type</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #DC3545; font-weight: bold;">
+                                    string
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The type of DIMM, e.g.,
+                                    DDR4
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">region</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #007BFF; font-weight: bold;">
+                                    category
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The region of server
+                                    location in anonymized format
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><strong>failure_ticket.csv</strong> includes the failures of each DIMM in this dataset in 3
+                        columns. The columns are defined as follows:</p>
+                    <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                        <table style="width: 100%; border-collapse: collapse; background-color: #fff; border-radius: 8px; overflow: hidden;">
+                            <thead>
+                            <tr>
+                                <th style="padding: 12px 15px; text-align: left; background-color: #2196F3; color: white; font-weight: bold;">
+                                    Field
+                                </th>
+                                <th style="padding: 12px 15px; text-align: left; background-color: #2196F3; color: white; font-weight: bold;">
+                                    Type
+                                </th>
+                                <th style="padding: 12px 15px; text-align: left; background-color: #2196F3; color: white; font-weight: bold;">
+                                    Description
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">serial_number</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #DC3545; font-weight: bold;">
+                                    string
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The DIMM ID</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">failure_time</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #DC3545; font-weight: bold;">
+                                    string
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The time when the DIMM
+                                    failures happened in timestamp
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">serial_number_type</td>
+                                <td style="padding: 12px 15px; text-align: left; color: #DC3545; font-weight: bold;">
+                                    string
+                                </td>
+                                <td style="padding: 12px 15px; text-align: left; color: #555;">The server type of
+                                    failure, including A and B
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 </section>
 <!-- End Dataset -->

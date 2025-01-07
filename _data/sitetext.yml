@@ -23,19 +23,6 @@ en: &DEFAULT_EN
     title1: Background
     section: overview
 
-  target:
-    title: Target
-    body: "The tutorial targets for researchers and engineers in the field
-of system reliability and machine learning. The participants
-are expected to have a basic understanding of computer
-architecture, hardware errors and machine learning. If not, we
-also provide intuitive descriptions for interested participants
-during the tutorial. Anyone excited about ML for system is
-welcome. The expected audience size is around 50 to 150. No
-special technical equipment is needed and some way of taking
-notes is suggested."
-    section: target
-
   evaluation:
     title: Evaluation
     section: evaluation

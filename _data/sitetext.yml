@@ -53,6 +53,9 @@ special technical equipment is needed and some way of taking
 notes is suggested."
     section: target
 
+  evaluation:
+    title: Evaluation
+    section: evaluation
 
   agenda:
     title: Timeline

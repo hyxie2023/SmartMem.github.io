@@ -1,74 +1,116 @@
 <!-- Overview -->
 <section class="page-section" id="{{ site.data.sitetext[site.locale].overview.section | default: 'overview' }}">
-  <style>
-    /* 通用样式 */
-    .announcement-banner {
-      padding: 15px 20px;
-      margin-bottom: 40px;
-      border-radius: 10px;
-      border: 1px solid #B3E5FC;
-      margin-left: 20px;
-      margin-right: 20px;
-      width: 100%;
-    }
+    <style>
+        /* 通用样式 */
+        .announcement-banner {
+            padding: 15px 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            border: 1px solid #B3E5FC;
+            margin-left: 20px;
+            margin-right: 20px;
+            width: 100%;
+        }
 
-    /* 第一个横幅 */
-    .row:nth-child(1) .announcement-banner {
-      background-color: #E6F7FF;
-      border-color: #B3E5FC;
-    }
+        /* 第一个横幅 */
+        .row:nth-child(1) .announcement-banner {
+            background-color: #E6F7FF;
+            border-color: #B3E5FC;
+        }
 
-    /* 第二个横幅 */
-    .row:nth-child(2) .announcement-banner {
-      background-color: #FFF3E0;
-      border-color: #FFE0B2;
-    }
+        /* 第二个横幅 */
+        .row:nth-child(2) .announcement-banner {
+            background-color: #FFF3E0;
+            border-color: #FFE0B2;
+        }
 
-    /* 链接样式 */
-    .announcement-banner a {
-      color: #007bff; /* 链接颜色 */
-      text-decoration: none; /* 去掉下划线 */
-    }
+        /* 链接样式 */
+        .announcement-banner a {
+            color: #007bff; /* 链接颜色 */
+            text-decoration: none; /* 去掉下划线 */
+        }
 
-    .announcement-banner a:hover {
-      text-decoration: underline; /* 鼠标悬停时显示下划线 */
-    }
-  </style>
+        .announcement-banner a:hover {
+            text-decoration: underline; /* 鼠标悬停时显示下划线 */
+        }
+    </style>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12 mx-auto">
-      <div class="announcement-banner">
-        🏆 This challenge is a part of <a href="https://www2025.thewebconf.org/accepted-competitions" target="_blank">The Web Conference 2025</a>.
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <div class="announcement-banner">
+                    🏆 This challenge is a part of <a href="https://www2025.thewebconf.org/accepted-competitions"
+                                                     target="_blank">The Web Conference 2025</a>.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <div class="announcement-banner">
+                    🚩 See more details: <a href="https://www.codabench.org/competitions/3586" target="_blank">Competition
+                    Page</a>.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].overview.title | default:
+                    "Overview" }}</h2>
+                <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].overview.text | default: ""
+                    }}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <div class="large text-muted">
+                    <p>
+                        This competition focuses on predicting Uncorrectable Errors (UEs) in Dual Random Access Memory
+                        (DRAM), a critical issue impacting data center reliability and cloud service availability. As
+                        data centers expand to meet the growing demands of cloud computing and web-based applications,
+                        hardware failures, particularly memory failures, have become a significant threat to server
+                        reliability and uptime. Participants will tackle challenges such as data noise, extreme class
+                        imbalance, heterogeneous data sources, and hardware aging, using a real-world dataset containing
+                        memory system configurations, error logs, and failure tags. The goal is to develop efficient and
+                        generalized solutions for UE prediction, fostering advancements in machine learning applications
+                        for web-centric and cloud environments, ultimately enhancing the reliability and resilience of
+                        modern data centers.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <h3 class="section-subheading-large text-muted">{{ site.data.sitetext[site.locale].overview.title1 |
+                    default: "Background" }}</h3>
+            </div>
+            <div class="col-lg-12 mx-auto">
+                <div class="large text-muted">
+                    <p>
+                        Uncorrectable Errors (UEs) of Dynamic Random Access Memory (DRAM) have been identified as a
+                        major failure cause in data centers. The multi-bit UE failure of High Bandwidth Memory (HBM)
+                        poses a significant threat to the availability and reliability of servers and entire computing
+                        clusters.
+                        Forecasting UEs before enacting preemptive maintenance measures has emerged as a viable strategy
+                        for diminishing server outages. Several machine-learning based solutions have also been
+                        proposed.
+                    </p>
+                    <p>
+                        However, predicting UEs presents several challenges: data noise and extreme class imbalance, as
+                        UEs are exceptionally rare in memory events; heterogeneous data sources, since DRAMs in
+                        operational environments originate from diverse manufacturing or architectural platforms;
+                        distribution shifts caused by hardware aging; and latent factors introduced by the dynamic
+                        access mechanisms of memory.
+                    </p>
+                    <p>
+                        We cure a real-world memory error dataset that contains both micro-level and bit-level
+                        information and
+                        present a two-stage challenge for more efficient and generalizable event prediction solutions.
+                        We believe the competition will serve as a fertile ground for fostering discussions and advancing
+                        research on several important research topics towards real-world ML applications.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12 mx-auto">
-      <div class="announcement-banner">
-        🚩 See more details: <a href="https://www.codabench.org/competitions/3586" target="_blank">Competition Page</a>.
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12 text-center">
-      <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].overview.title | default: "Overview" }}</h2>
-      <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].overview.text | default: "" }}</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12 mx-auto">
-      <div class="large text-muted">{{ site.data.sitetext[site.locale].overview.body | markdownify }}</div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12 mx-auto">
-      <h3 class="section-subheading-large text-muted">{{ site.data.sitetext[site.locale].overview.title1 | default: "Background" }}</h3>
-    </div>
-    <div class="col-lg-12 mx-auto">
-      <div class="large text-muted">{{ site.data.sitetext[site.locale].overview.text1 | markdownify }}</div>
-    </div>
-  </div>
-</div>
 </section>
 <!-- End Overview -->

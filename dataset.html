@@ -116,7 +116,10 @@ background: grey
                         <td style="padding: 12px 15px; text-align: left; color: #28A745; font-weight: bold;">
                             integer
                         </td>
-                        <td style="padding: 12px 15px; text-align: left; color: #555;">Logs info on retried reads in decimal format, validating error types and parity</td>
+                        <td style="padding: 12px 15px; text-align: left; color: #555;">
+                            Logs info on retried reads in decimal format, validating error types and parity.<br>
+                            Hint: If the result of logical AND operation between retryrderrlog and 0x0001 is 1 (e.g., retryrderrlog & 0x0001 = 1), it indicates RETRY_RD_ERR_LOG_PARITY is valid.
+                        </td>
                     </tr>
                     <tr style="border-bottom: 1px solid #ddd;">
                         <td style="padding: 12px 15px; text-align: left; color: #555;">burst_info</td>

@@ -142,6 +142,12 @@ en: &DEFAULT_EN
       - title: "USTC"
         url: https://en.ustc.edu.cn/
         logo: assets/img/USTC.png
+      - title: "HKUST(Guang Zhou)"
+        url: https://www.hkust-gz.edu.cn/
+        logo: assets/img/HKUST.svg
+      - title: "XMU"
+        url: https://en.xmu.edu.cn/
+        logo: assets/img/XMU.png
       - title: "UC"
         url: https://www.uc.pt/en/
         logo: assets/img/UC.png

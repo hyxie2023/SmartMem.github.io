@@ -2,14 +2,40 @@
 {% if site.locale and site.locale != "" and site.locale != nil %}
 <section class="py-5" id="{{ site.data.sitetext[site.locale].clients.section | default: " clients" }}">
 <div class="container">
-    <div class="row" {% if site.data.sitetext[site.locale].clients.horizontal-scrolling==
-    "yes" %} id="scrolling-clients" {% endif %}>
-    {% for client in site.data.sitetext[site.locale].clients.list %}
-    <div class="col">
-        <a href="{{ client.url }}">
-            <img class="img-fluid d-block mx-auto" src="{{ client.logo }}" alt="{{ client.title }}"
-                 style="max-height: 120px">
-        </a>
+    <div class="row" style="display: grid; align-items: center;">
+        <div class="col">
+            <a href="https://www.huawei.com/en/">
+                <img class="img-fluid d-block mx-auto" src="assets/img/huawei.png" alt="Huawei"
+                     style="max-width: 120px">
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://www.tu.berlin/en/">
+                <img class="img-fluid d-block mx-auto" src="assets/img/TUberlin.png" alt="TU Berlin"
+                     style="max-width: 120px">
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://en.ustc.edu.cn/">
+                <img class="img-fluid d-block mx-auto" src="assets/img/USTC.png" alt="USTC" style="max-width: 120px">
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://www.hkust-gz.edu.cn/">
+                <img class="img-fluid d-block mx-auto" src="assets/img/HKUST.svg" alt="HKUST(Guang Zhou)"
+                     style="max-width: 120px">
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://en.xmu.edu.cn/">
+                <img class="img-fluid d-block mx-auto" src="assets/img/XMU.png" alt="XMU" style="max-width: 120px">
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://www.uc.pt/en/">
+                <img class="img-fluid d-block mx-auto" src="assets/img/UC.png" alt="UC" style="max-width: 120px">
+            </a>
+        </div>
     </div>
     {% endfor %}
 </div>

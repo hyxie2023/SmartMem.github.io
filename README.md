@@ -1,4 +1,4 @@
-# WWW 2025 Competition: SmartMemF
+# WWW 2025 Competition: SmartMem
 
 This challenge is a part of [The Web Conference 2025](https://www2025.thewebconf.org/accepted-competitions).
 

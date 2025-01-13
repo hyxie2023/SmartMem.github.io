@@ -64,13 +64,14 @@
         <div class="row">
             <div class="col-lg-12 mx-auto">
                 <div class="large text-muted">
-                    <h2 class="section-heading text-uppercase"> Notice </h2>
-                    <p>
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="color: yellow;">
+                    <!-- 使用 d-flex 将标题和按钮放在同一行 -->
+                    <div class="d-flex align-items-center">
+                        <h3 class="section-heading text-uppercase mb-0"> Notice </h3>
+                        <a class="btn btn-primary ml-3" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="color: yellow;">
                             New Update: January 13, 2025 ▼
                             <span id="timeSinceNotice" style="color: white;"></span> <!-- 时间差字体为白色 -->
                         </a>
-                    </p>
+                    </div>
                     <div class="collapse" id="collapseExample">
                         <div class="card card-body">
                             This is the collapsible content. You can place any text or other HTML elements here.

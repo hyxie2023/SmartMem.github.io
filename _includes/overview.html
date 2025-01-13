@@ -66,8 +66,16 @@
                 <div class="large text-muted">
                     <h2 class="section-heading text-uppercase"> Notice </h2>
                     <p>
-                        Notice
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            New Update: January 13, 2025
+                        </a>
+                        <span id="timeSinceNotice"></span> <!-- 这里显示时间差 -->
                     </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            This is the collapsible content. You can place any text or other HTML elements here.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -229,4 +237,37 @@
         </div>
     </div>
 </section>
+
+<script>
+    // 目标时间：2025年1月13日 23:08 UTC
+    const targetDate = new Date(Date.UTC(2025, 0, 13, 23, 0, 0));
+
+    // 更新时间差的函数
+    function updateTimeSinceNotice() {
+        const now = new Date(); // 当前时间
+        const timeDiff = now - targetDate; // 时间差（毫秒）
+
+        // 如果当前时间早于目标时间，显示倒计时
+        if (timeDiff < 0) {
+            document.getElementById('timeSinceNotice').textContent = ' (Time until notice: ' + formatTime(-timeDiff) + ')';
+        }
+        // 如果当前时间晚于目标时间，显示已过时间
+        else {
+            document.getElementById('timeSinceNotice').textContent = ' (Time since notice: ' + formatTime(timeDiff) + ')';
+        }
+    }
+
+    // 将时间差格式化为天和小时
+    function formatTime(milliseconds) {
+        const hours = Math.floor(milliseconds / (1000 * 60 * 60));
+        const days = Math.floor(hours / 24);
+        const remainingHours = hours % 24;
+
+        return days + ' days, ' + remainingHours + ' hours';
+    }
+
+    // 每秒更新一次时间差
+    setInterval(updateTimeSinceNotice, 1000);
+    updateTimeSinceNotice(); // 初始化
+</script>
 <!-- End Overview -->

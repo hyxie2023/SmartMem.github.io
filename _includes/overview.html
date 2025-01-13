@@ -66,10 +66,10 @@
                 <div class="large text-muted">
                     <h2 class="section-heading text-uppercase"> Notice </h2>
                     <p>
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                            New Update: January 13, 2025
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="color: yellow;">
+                            New Update: January 13, 2025 ▼
+                            <span id="timeSinceNotice" style="color: white;"></span> <!-- 时间差字体为白色 -->
                         </a>
-                        <span id="timeSinceNotice"></span> <!-- 这里显示时间差 -->
                     </p>
                     <div class="collapse" id="collapseExample">
                         <div class="card card-body">
@@ -79,7 +79,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -239,8 +238,7 @@
 </section>
 
 <script>
-    // 目标时间：2025年1月13日 23:08 UTC
-    const targetDate = new Date(Date.UTC(2025, 0, 13, 23, 0, 0));
+    const targetDate = new Date(Date.UTC(2025, 0, 13, 15, 0, 0));
 
     // 更新时间差的函数
     function updateTimeSinceNotice() {
